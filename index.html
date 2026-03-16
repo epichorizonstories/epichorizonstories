@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Epic Horizon Stories | African Filmmaking</title>
+    
+    <!-- Favicon and App Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#000000">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Cinzel:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -73,7 +82,6 @@
     <!-- Hero Section -->
     <header class="relative h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden">
         <div class="absolute inset-0 z-0 opacity-40">
-            <!-- Optimized placeholder for a cinematic film background, rendered via CSS to save load time -->
             <div class="w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-800 via-black to-black"></div>
         </div>
         
@@ -139,7 +147,7 @@
     <!-- Footer -->
     <footer class="py-12 border-t border-white/10 text-center flex flex-col items-center justify-center gap-6">
         <img src="https://i.postimg.cc/26yz6Mf5/EPIC-HORIZON-STORIES.jpg" alt="Epic Horizon Stories Logo" class="h-16 w-16 object-cover rounded-full grayscale opacity-50" loading="lazy">
-        <p class="text-sm text-gray-600 tracking-widest uppercase">© 2025 Epic Horizon Stories. All Rights Reserved.</p>
+        <p class="text-sm text-gray-600 tracking-widest uppercase">© 2022 - 2026 Epic Horizon Stories. All Rights Reserved.</p>
     </footer>
 
     <!-- Application Cinematic Dropdown Modal -->
@@ -181,7 +189,6 @@
                         </div>
                     </div>
                     <div class="relative">
-                        <!-- Label acts as placeholder since date inputs handle placeholders poorly -->
                         <span class="text-xs text-gray-500 absolute -top-4 left-0 uppercase tracking-wider">Date of Birth</span>
                         <input type="date" id="dob" required class="w-full py-2 text-lg mt-1">
                     </div>
@@ -194,7 +201,6 @@
                 <div class="relative">
                     <select id="country" required class="w-full py-2 text-lg appearance-none cursor-pointer">
                         <option value="" disabled selected>Select Country (Africa Only)</option>
-                        <!-- Comprehensive list of African Countries -->
                         <option value="Algeria">Algeria</option><option value="Angola">Angola</option><option value="Benin">Benin</option><option value="Botswana">Botswana</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cameroon">Cameroon</option><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option><option value="Djibouti">Djibouti</option><option value="Egypt">Egypt</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Gabon">Gabon</option><option value="Gambia">Gambia</option><option value="Ghana">Ghana</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Ivory Coast">Ivory Coast</option><option value="Kenya">Kenya</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Mali">Mali</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Namibia">Namibia</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Rwanda">Rwanda</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Senegal">Senegal</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Sudan">South Sudan</option><option value="Sudan">Sudan</option><option value="Tanzania">Tanzania</option><option value="Togo">Togo</option><option value="Tunisia">Tunisia</option><option value="Uganda">Uganda</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
@@ -229,19 +235,17 @@
 
         function openModal() {
             modal.classList.add('open');
-            body.style.overflow = 'hidden'; // Prevent scrolling on main page
+            body.style.overflow = 'hidden'; 
         }
 
         function closeModal() {
             modal.classList.remove('open');
-            body.style.overflow = 'auto'; // Restore scrolling
+            body.style.overflow = 'auto'; 
         }
 
-        // Handle Application submission logic
         function handleFormSubmit(event) {
             event.preventDefault();
 
-            // Gather form data
             const fname = document.getElementById('fname').value;
             const lname = document.getElementById('lname').value;
             const gender = document.getElementById('gender').value;
@@ -250,11 +254,9 @@
             const country = document.getElementById('country').value;
             const portfolio = document.getElementById('portfolio').value;
 
-            // Prepare Email Content
             const targetEmail = "apply@epichorizonstories.com";
             const subject = `New Filmmaker Application: ${fname} ${lname} (${country})`;
             
-            // Format body with line breaks suitable for URLs
             const bodyText = `EPIC HORIZON STORIES APPLICATION
 -----------------------------------
 Name: ${fname} ${lname}
@@ -267,24 +269,19 @@ Portfolio Link: ${portfolio}
 
 *** DON'T FORGET TO ATTACH YOUR STORY PDFs BEFORE SENDING ***`;
 
-            // URI Encoding for URLs
             const encodedSubject = encodeURIComponent(subject);
             const encodedBody = encodeURIComponent(bodyText);
 
-            // Determine email provider logic based on user's input email
             const isGmail = email.toLowerCase().endsWith('@gmail.com');
 
             if (isGmail) {
-                // Open Gmail compose window
                 const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${targetEmail}&su=${encodedSubject}&body=${encodedBody}`;
                 window.open(gmailUrl, '_blank');
             } else {
-                // Open Microsoft Outlook compose window as requested for non-gmail
                 const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=${targetEmail}&subject=${encodedSubject}&body=${encodedBody}`;
                 window.open(outlookUrl, '_blank');
             }
 
-            // Provide visual feedback and close modal
             setTimeout(() => {
                 closeModal();
                 document.getElementById('apply-form').reset();
