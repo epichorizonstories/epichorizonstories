@@ -207,11 +207,17 @@
                     <input type="url" id="portfolio" required class="w-full py-2 text-lg mt-1" placeholder="https://your-portfolio.vercel.app">
                 </div>
 
-                <div class="pt-8 text-center">
+                <div class="pt-8 text-center flex flex-col items-center">
                     <button type="submit" class="w-full md:w-auto px-12 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors">
                         Send Application via Email
                     </button>
-                    <p class="text-xs text-gray-600 mt-4">This will open your email client securely.</p>
+                    
+                    <div class="mt-6 p-4 border border-white/20 bg-white/5 rounded-sm max-w-md w-full">
+                        <p class="text-sm text-gray-300">
+                            <span class="text-white font-bold uppercase tracking-wider block mb-1">Important Step:</span>
+                            Once your email client opens, please remember to <strong class="text-white">attach PDF files</strong> of the stories you have written so far before sending.
+                        </p>
+                    </div>
                 </div>
             </form>
         </div>
@@ -257,7 +263,9 @@ Date of Birth: ${dob}
 Email: ${email}
 Country: ${country}
 Portfolio Link: ${portfolio}
------------------------------------`;
+-----------------------------------
+
+*** DON'T FORGET TO ATTACH YOUR STORY PDFs BEFORE SENDING ***`;
 
             // URI Encoding for URLs
             const encodedSubject = encodeURIComponent(subject);
