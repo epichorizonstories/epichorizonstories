@@ -172,6 +172,64 @@
         </div>
     </section>
 
+    <!-- Call for Filmmakers Section -->
+    <section class="py-24 px-6 md:px-12 lg:px-24 bg-black border-t border-white/10">
+        <div class="max-w-4xl mx-auto space-y-12">
+            <div class="text-center space-y-6">
+                <h2 class="font-cinematic text-3xl md:text-5xl font-bold tracking-wider text-white">Call for Filmmakers</h2>
+                <h3 class="text-xl md:text-2xl text-gray-300 font-semibold tracking-wide">Epic Horizon Stories Arrives in Tanzania, Rwanda, Morocco, and Chad</h3>
+                <div class="w-12 h-1 bg-white mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-6 text-gray-400 text-lg leading-relaxed font-light">
+                <p>Epic Horizon Stories is officially expanding its search for the next generation of African cinematic voices. Following our successful residencies and productions in Nigeria, Kenya, South Africa, Egypt, and Ethiopia, we are now opening applications for visionary youth talent in Tanzania, Rwanda, Morocco, and Chad.</p>
+                <p>We believe the continent’s most powerful narratives are still waiting to be told. We are looking for filmmakers who can bridge the gap between tradition and innovation bringing unique cultural tales, historical depth, and bold creative perspectives to the screen.</p>
+            </div>
+
+            <div class="space-y-10">
+                <div class="p-8 border border-white/10 bg-white/5 rounded-3xl">
+                    <h4 class="text-white font-bold text-xl uppercase tracking-widest mb-6">Why Join Us?</h4>
+                    <ul class="space-y-5 text-gray-400 font-light">
+                        <li class="flex gap-4 items-start">
+                            <span class="text-white mt-1">•</span> 
+                            <span><strong class="text-white font-semibold">Career Advancement:</strong> Top participants will be eligible for a temporary internship with the potential to transition into a Permanent Online Role (flexible 3-hour daily commitment).</span>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <span class="text-white mt-1">•</span> 
+                            <span><strong class="text-white font-semibold">Professional Equipment & Prizes:</strong> We are rewarding the best-selected projects with high-end tools to elevate your craft, including Laptops, Professional Screens, and Smartphones.</span>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <span class="text-white mt-1">•</span> 
+                            <span><strong class="text-white font-semibold">Financial Incentives:</strong> Significant cash prizes will be awarded to standout project submissions.</span>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <span class="text-white mt-1">•</span> 
+                            <span><strong class="text-white font-semibold">Pan-African Network:</strong> Connect with a community of creators and industry leaders across the continent.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="p-8 border border-white/10 bg-white/5 rounded-3xl">
+                    <h4 class="text-white font-bold text-xl uppercase tracking-widest mb-4">How to Apply & Selection Criteria</h4>
+                    <p class="text-gray-400 font-light mb-6">To ensure we identify the most capable talent for our production team and internship roles, all applicants must meet the following requirements:</p>
+                    <ol class="space-y-5 text-gray-400 font-light list-decimal list-outside ml-5 marker:text-white marker:font-bold">
+                        <li class="pl-2"><strong class="text-white font-semibold">Project Submission:</strong> Submit your unique story concept or historical narrative via the portal.</li>
+                        <li class="pl-2"><strong class="text-white font-semibold">Digital Portfolio:</strong> Applicants must provide a link to a digital portfolio. This portfolio will be used to evaluate your creative range beyond the submitted project and will play a decisive role in the hiring process for internships and permanent roles.</li>
+                        <li class="pl-2"><strong class="text-white font-semibold">Technical Integration:</strong> Our application and hosting infrastructure is powered by our partners, Vercel and Firebase, ensuring a seamless and secure submission process.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center">
+                <!-- Rounded Bottom Apply Now Button -->
+                <button onclick="openModal()" class="group relative px-10 py-4 border border-white text-white font-bold uppercase tracking-widest text-sm md:text-base overflow-hidden transition-all hover:text-black rounded-full">
+                    <span class="relative z-10">Apply Now</span>
+                    <div class="absolute inset-0 bg-white transform -translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0 z-0 rounded-full"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="py-12 border-t border-white/10 text-center flex flex-col items-center justify-center gap-6">
         <img src="https://i.postimg.cc/26yz6Mf5/EPIC-HORIZON-STORIES.jpg" alt="Epic Horizon Stories Logo" class="h-16 w-16 object-cover rounded-full grayscale opacity-50" loading="lazy">
@@ -300,7 +358,7 @@
                 errorBox.classList.add('hidden');
             }
 
-            const targetEmail = "epichorizonstories@gmail.com";
+            const targetEmail = "apply@epichorizonstories.com";
             const subject = `New Filmmaker Application: ${fname} ${lname} (${country})`;
             
             const bodyText = `EPIC HORIZON STORIES APPLICATION
