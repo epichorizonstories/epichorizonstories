@@ -41,7 +41,7 @@
         /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #000; }
-        ::-webkit-scrollbar-thumb { background: #333; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: #555; }
 
         /* Form Inputs Styling */
@@ -70,12 +70,13 @@
     <!-- Navigation -->
     <nav class="fixed w-full z-40 top-0 mix-blend-difference px-6 py-6 flex justify-between items-center">
         <div class="flex items-center gap-4">
-            <img src="https://i.postimg.cc/26yz6Mf5/EPIC-HORIZON-STORIES.jpg" alt="Epic Horizon Stories Logo" class="h-10 w-10 md:h-12 md:w-12 object-cover rounded-full border border-white/20" loading="lazy">
+            <img src="https://i.postimg.cc/26yz6Mf5/EPIC-HORIZON-STORIES.jpg" alt="Epic Horizon Stories Logo" class="h-10 w-10 md:h-12 md:w-12 object-cover rounded-full border border-white/20 grayscale" loading="lazy">
             <span class="font-cinematic text-lg md:text-2xl font-bold tracking-widest text-white">EPIC HORIZON</span>
         </div>
-        <button onclick="openModal()" class="group relative px-6 py-2 md:px-8 md:py-3 border border-white text-white font-semibold uppercase tracking-widest text-xs md:text-sm overflow-hidden transition-all hover:text-black">
+        <!-- Rounded Button -->
+        <button onclick="openModal()" class="group relative px-6 py-2 md:px-8 md:py-3 border border-white text-white font-semibold uppercase tracking-widest text-xs md:text-sm overflow-hidden transition-all hover:text-black rounded-full">
             <span class="relative z-10">Apply Now</span>
-            <div class="absolute inset-0 bg-white transform -translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0 z-0"></div>
+            <div class="absolute inset-0 bg-white transform -translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0 z-0 rounded-full"></div>
         </button>
     </nav>
 
@@ -100,13 +101,40 @@
         </div>
     </header>
 
+    <!-- Image Gallery Section (Beauty & Community) -->
+    <section class="py-24 px-6 md:px-12 lg:px-24 bg-black border-t border-white/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-cinematic text-3xl md:text-5xl font-bold tracking-wider text-white">The African Lens</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Capturing the sheer excellence of our landscapes and the vibrant heartbeat of our communities.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Community Image -->
+                <div class="relative group overflow-hidden rounded-3xl border border-white/20">
+                    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=2070&auto=format&fit=crop" alt="African Community Activity" class="w-full h-80 object-cover grayscale transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 flex items-end p-8">
+                        <h3 class="text-xl font-bold tracking-widest uppercase">Community & Spirit</h3>
+                    </div>
+                </div>
+                <!-- Beauty/Nature Image -->
+                <div class="relative group overflow-hidden rounded-3xl border border-white/20">
+                    <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1920&auto=format&fit=crop" alt="Beauty of Africa" class="w-full h-80 object-cover grayscale transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 flex items-end p-8">
+                        <h3 class="text-xl font-bold tracking-widest uppercase">Excellence & Beauty</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About & Footprint Section -->
     <section class="py-24 px-6 md:px-12 lg:px-24 bg-black border-t border-white/10">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
             
             <div class="space-y-8">
                 <h2 class="font-cinematic text-3xl md:text-5xl font-bold tracking-wider">Our Journey</h2>
-                <div class="w-12 h-1 bg-white"></div>
+                <div class="w-12 h-1 bg-white rounded-full"></div>
                 <p class="text-gray-400 text-lg leading-relaxed font-light">
                     Since our inception in <strong class="text-white">2022</strong>, Epic Horizon Stories has been dedicated to discovering and elevating young filmmaking talent in Africa. We provide the sponsorship, platform, and resources necessary for raw visionaries to translate their perspectives onto the global screen.
                 </p>
@@ -114,7 +142,7 @@
 
             <div class="grid grid-cols-1 gap-12">
                 <!-- Active Operations -->
-                <div class="p-8 border border-white/20 bg-white/5 rounded-sm backdrop-blur-sm">
+                <div class="p-8 border border-white/20 bg-white/5 rounded-3xl backdrop-blur-sm">
                     <h3 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-6">Successfully Operating In</h3>
                     <div class="flex flex-wrap gap-3">
                         <span class="px-4 py-2 bg-white text-black text-sm font-semibold rounded-full">Ghana</span>
@@ -130,8 +158,8 @@
                 </div>
 
                 <!-- Upcoming Operations -->
-                <div class="p-8 border border-white/20 border-dashed rounded-sm">
-                    <h3 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-6">Looking Forward To (Upcoming)</h3>
+                <div class="p-8 border border-white/20 border-dashed rounded-3xl">
+                    <h3 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-6">Looking Forward To</h3>
                     <div class="flex flex-wrap gap-3">
                         <span class="px-4 py-2 border border-gray-600 text-gray-300 text-sm rounded-full">Tanzania</span>
                         <span class="px-4 py-2 border border-gray-600 text-gray-300 text-sm rounded-full">Rwanda</span>
@@ -153,12 +181,12 @@
     <!-- Application Cinematic Dropdown Modal -->
     <div id="application-modal" class="fixed inset-0 z-50 bg-black flex flex-col justify-center items-center overflow-y-auto pt-20 pb-10 px-4">
         
-        <!-- Close Button -->
-        <button onclick="closeModal()" class="absolute top-8 right-8 text-white/50 hover:text-white transition-colors p-2">
+        <!-- Close Button (Rounded) -->
+        <button onclick="closeModal()" class="absolute top-8 right-8 text-white/50 hover:text-white transition-colors p-2 bg-white/10 hover:bg-white/20 rounded-full">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
 
-        <div class="w-full max-w-3xl mx-auto bg-black border border-white/10 p-8 md:p-16 shadow-2xl">
+        <div class="w-full max-w-3xl mx-auto bg-black border border-white/20 p-8 md:p-16 shadow-2xl rounded-3xl">
             <div class="mb-12 text-center">
                 <h2 class="font-cinematic text-3xl md:text-4xl font-bold tracking-widest text-white mb-4">DIRECTOR'S CALL</h2>
                 <p class="text-gray-400 font-light">Submit your application to join the next wave of Epic Horizon filmmakers.</p>
@@ -209,16 +237,21 @@
                 </div>
 
                 <div class="relative">
-                    <span class="text-xs text-gray-500 absolute -top-4 left-0 uppercase tracking-wider">Portfolio Link (Netlify, Vercel, Firebase, etc.)</span>
+                    <span class="text-xs text-gray-500 absolute -top-4 left-0 uppercase tracking-wider">Portfolio Link (.vercel.app or .web.app ONLY)</span>
                     <input type="url" id="portfolio" required class="w-full py-2 text-lg mt-1" placeholder="https://your-portfolio.web.app">
+                    <!-- Error Box for URL Validation -->
+                    <div id="url-error" class="hidden mt-3 p-3 bg-white text-black text-sm font-bold rounded-xl border border-gray-400">
+                        Invalid Link: We only accept Vercel (.vercel.app) or Firebase (.web.app) portfolio links. Netlify and other domains are not permitted.
+                    </div>
                 </div>
 
                 <div class="pt-8 text-center flex flex-col items-center">
-                    <button type="submit" class="w-full md:w-auto px-12 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors">
+                    <!-- Rounded Submit Button -->
+                    <button type="submit" class="w-full md:w-auto px-12 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors rounded-full">
                         Send Application via Email
                     </button>
                     
-                    <div class="mt-6 p-4 border border-white/20 bg-white/5 rounded-sm max-w-md w-full">
+                    <div class="mt-6 p-4 border border-white/20 bg-white/5 rounded-3xl max-w-md w-full">
                         <p class="text-sm text-gray-300">
                             <span class="text-white font-bold uppercase tracking-wider block mb-1">Important Step:</span>
                             Once your email client opens, please remember to <strong class="text-white">attach PDF files</strong> of the stories you have written so far before sending.
@@ -232,6 +265,7 @@
     <script>
         const modal = document.getElementById('application-modal');
         const body = document.body;
+        const errorBox = document.getElementById('url-error');
 
         function openModal() {
             modal.classList.add('open');
@@ -241,6 +275,7 @@
         function closeModal() {
             modal.classList.remove('open');
             body.style.overflow = 'auto'; 
+            errorBox.classList.add('hidden'); // Hide error when closing modal
         }
 
         function handleFormSubmit(event) {
@@ -252,7 +287,18 @@
             const dob = document.getElementById('dob').value;
             const email = document.getElementById('email').value.trim();
             const country = document.getElementById('country').value;
-            const portfolio = document.getElementById('portfolio').value;
+            const portfolio = document.getElementById('portfolio').value.trim().toLowerCase();
+
+            // Strict Validation: Accept only vercel.app and web.app, explicitly block netlify
+            const isValidUrl = portfolio.includes('.vercel.app') || portfolio.includes('.web.app');
+            const hasNetlify = portfolio.includes('netlify');
+
+            if (!isValidUrl || hasNetlify) {
+                errorBox.classList.remove('hidden');
+                return; // Stop form submission
+            } else {
+                errorBox.classList.add('hidden');
+            }
 
             const targetEmail = "apply@epichorizonstories.com";
             const subject = `New Filmmaker Application: ${fname} ${lname} (${country})`;
